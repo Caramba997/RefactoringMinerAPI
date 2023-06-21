@@ -29,14 +29,11 @@ public class APIController {
 	  }
 	  
 	  private CommitResults[] processCommits(String repo, String owner, String[] commits) throws Exception {
-	        // This is a temp folder to clone or checkout git repositories.
 	        File tempFolder = new File("temp");
 
-	        // Creates a RefDiff instance configured with the JavaScript plugin.
 	        JsPlugin jsPlugin = new JsPlugin();
 	        RefDiff refDiffJs = new RefDiff(jsPlugin);
 
-	        // Clone the angular.js GitHub repo.
 	        File clonedRepo = refDiffJs.cloneGitRepository(new File(tempFolder, repo), "https://github.com/" + owner + "/" + repo + ".git");
 
 	        // You can compute the relationships between the code elements in a commit with

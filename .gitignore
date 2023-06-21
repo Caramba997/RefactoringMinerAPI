@@ -51,3 +51,6 @@ local.properties
 
 ### VS Code ###
 .vscode/
+
+# Temp files
+temp/
